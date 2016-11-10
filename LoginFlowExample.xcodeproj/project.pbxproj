@@ -14,6 +14,8 @@
 		2F64D0311DD4003B008A5D2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F64D02F1DD4003B008A5D2C /* LaunchScreen.storyboard */; };
 		2F64D03C1DD4003B008A5D2C /* LoginFlowExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64D03B1DD4003B008A5D2C /* LoginFlowExampleTests.swift */; };
 		2F64D0471DD4003B008A5D2C /* LoginFlowExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64D0461DD4003B008A5D2C /* LoginFlowExampleUITests.swift */; };
+		2F64D0561DD400C0008A5D2C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64D0551DD400C0008A5D2C /* LoginViewController.swift */; };
+		2F64D0581DD403E6008A5D2C /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F64D0571DD403E6008A5D2C /* ContainerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2F64D0421DD4003B008A5D2C /* LoginFlowExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginFlowExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F64D0461DD4003B008A5D2C /* LoginFlowExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowExampleUITests.swift; sourceTree = "<group>"; };
 		2F64D0481DD4003B008A5D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F64D0551DD400C0008A5D2C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		2F64D0571DD403E6008A5D2C /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				2F64D0261DD4003B008A5D2C /* AppDelegate.swift */,
+				2F64D0571DD403E6008A5D2C /* ContainerViewController.swift */,
+				2F64D0551DD400C0008A5D2C /* LoginViewController.swift */,
 				2F64D0281DD4003B008A5D2C /* ViewController.swift */,
 				2F64D02A1DD4003B008A5D2C /* Main.storyboard */,
 				2F64D02D1DD4003B008A5D2C /* Assets.xcassets */,
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F64D0561DD400C0008A5D2C /* LoginViewController.swift in Sources */,
 				2F64D0291DD4003B008A5D2C /* ViewController.swift in Sources */,
+				2F64D0581DD403E6008A5D2C /* ContainerViewController.swift in Sources */,
 				2F64D0271DD4003B008A5D2C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,14 +1,85 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11760" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KOE-Fr-a82">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11755"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
+        <scene sceneID="PE3-Sh-uCz">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="aec-1V-ywI" customClass="LoginViewController" customModule="LoginFlowExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zea-dC-o7c"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rej-3X-OIk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wdL-J2-JZ3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocL-PC-ii6">
+                                <rect key="frame" x="162" y="315" width="50" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="aec-1V-ywI" eventType="touchUpInside" id="acl-ws-Roq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ocL-PC-ii6" firstAttribute="centerX" secondItem="wdL-J2-JZ3" secondAttribute="centerX" id="YK5-md-aQc"/>
+                            <constraint firstItem="ocL-PC-ii6" firstAttribute="centerY" secondItem="wdL-J2-JZ3" secondAttribute="centerY" id="ZNa-XQ-ItI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0tx-VG-wCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="-619"/>
+        </scene>
+        <!--Container View Controller-->
+        <scene sceneID="T58-yy-UOD">
+            <objects>
+                <viewController storyboardIdentifier="Container" id="KOE-Fr-a82" customClass="ContainerViewController" customModule="LoginFlowExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WN3-ax-GHu"/>
+                        <viewControllerLayoutGuide type="bottom" id="ML4-Z3-iAN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s9m-yP-O1w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-ov-xNV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="aec-1V-ywI" kind="embed" identifier="container" id="iBg-je-x0E"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UHJ-ov-xNV" firstAttribute="leading" secondItem="s9m-yP-O1w" secondAttribute="leading" id="3W1-Mh-w1i"/>
+                            <constraint firstItem="UHJ-ov-xNV" firstAttribute="top" secondItem="s9m-yP-O1w" secondAttribute="top" id="4dS-ut-JMN"/>
+                            <constraint firstAttribute="trailing" secondItem="UHJ-ov-xNV" secondAttribute="trailing" id="Ae9-Zz-yCB"/>
+                            <constraint firstItem="ML4-Z3-iAN" firstAttribute="top" secondItem="UHJ-ov-xNV" secondAttribute="bottom" id="HyO-KE-hNo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="UHJ-ov-xNV" id="rvg-4w-zTA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X4K-1Z-F2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-794" y="-306"/>
+        </scene>
+        <!--Flow-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Logged In" id="BYZ-38-t0r" customClass="ViewController" customModule="LoginFlowExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +87,43 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hp1-FW-q80">
+                                <rect key="frame" x="149.5" y="72" width="76" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hp1-FW-q80" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Go3-kT-E3k"/>
+                            <constraint firstItem="Hp1-FW-q80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NnP-G7-t8x"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Flow" id="Awo-i4-im3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1744.8" y="46.326836581709152"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mo6-mb-uDz">
+            <objects>
+                <navigationController storyboardIdentifier="Logged In Nav" automaticallyAdjustsScrollViewInsets="NO" id="f8r-hY-j41" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mJm-cv-IEZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ByZ-dA-7cs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jrA-9c-aEJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="805.60000000000002" y="46.326836581709152"/>
         </scene>
     </scenes>
 </document>
