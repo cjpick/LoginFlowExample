@@ -24,10 +24,11 @@ class ContainerViewController: UIViewController {
     func updateContainer() {
         if loggedIn {
             if let current = currentViewController {
-                let loggedInController = retrieveViewController(name: "Logged In Nav")
-                loggedInController.view.alpha = 0
-                addChildViewController(loggedInController)
-                transition(from: current, to: loggedInController, duration: 0.75, options: [.curveEaseInOut], animations: {
+                let loggedInController = retrieveViewController(name: "Logged In")
+                let navigation = UINavigationController(rootViewController: loggedInController) // Programmatically adding the navigation controller
+                navigation.view.alpha = 0
+                addChildViewController(navigation)
+                transition(from: current, to: navigation, duration: 0.75, options: [.curveEaseInOut], animations: {
                     current.view.alpha = 0
                     loggedInController.view.alpha = 1
                 })
